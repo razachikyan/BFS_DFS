@@ -49,14 +49,9 @@ void Graph::BFS(int startVertex) {
     queue.push(startVertex);
 
     while (!queue.empty()) {
-        // Dequeue a vertex from the queue
         int currentVertex = queue.front();
         queue.pop();
-
-        // Process the current vertex (in this example, we'll just print it)
         std::cout << currentVertex << " ";
-
-        // Enqueue all the unvisited neighboring vertices
         for (int neighbor : graphData[currentVertex - 1]) {
             if (!visited[neighbor - 1]) {
                 visited[neighbor - 1] = true;
